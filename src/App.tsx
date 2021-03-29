@@ -51,9 +51,6 @@ export function App() {
     })
   }, [selectedGenreId]);
 
-  function handleClickButton(id: number) {
-    setSelectedGenreId(id);
-  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -61,7 +58,7 @@ export function App() {
       <SideBar 
         genres={genres} 
         selectedGenreId={selectedGenreId} 
-        onClickCategory={handleClickButton}
+        setSelectedGenreId={setSelectedGenreId}
       />
 
       <Content
